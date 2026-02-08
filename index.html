@@ -1,272 +1,103 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mon Site Vitrine — Baye Masse Ba</title>
-
-  <style>
-    :root {
-      --bg: #f4f4f4;
-      --card: #ffffff;
-      --primary: #2c3e50;
-      --muted: #34495e;
-      --accent: #2ecc71;
-      --max-width: 900px;
-      --radius: 10px;
+    <meta charset="UTF-8">
+    <title>Développeur Web — J’aide les commerces à être visibles en ligne</title>
+    
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
     }
 
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: "Arial", sans-serif;
-      background: var(--bg);
-      color: var(--primary);
-      -webkit-font-smoothing:antialiased;
-    }
-
-    .container {
-      max-width: var(--max-width);
-      margin: 24px auto;
-      background: var(--card);
-      padding: 28px;
-      border-radius: var(--radius);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-    }
-
-    header h1 {
-      margin: 0 0 6px 0;
-      font-size: 28px;
-    }
-
-    header p.lead {
-      margin: 0 0 18px 0;
-      color: var(--muted);
-      text-align: center;
-    }
-
-    section {
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      margin-top: 0;
-      color: var(--muted);
-      font-size: 18px;
-    }
+    h1 { color: #2c3e50; }
+    h2 { color: #34495e; }
 
     ul {
-      background: #fff;
-      padding: 12px 16px;
-      border-radius: 6px;
-      list-style: disc;
-      margin: 8px 0;
+        background: white;
+        padding: 15px;
+        border-radius: 5px;
     }
 
-    p {
-      font-size: 16px;
-      line-height: 1.45;
-      margin: 8px 0;
-    }
+    p { font-size: 16px; }
 
-    /* Form */
-    form {
-      display: block;
-      margin-top: 8px;
-    }
-
-    label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 6px;
-      font-size: 14px;
-    }
-
-    input[type="text"],
-    textarea {
-      width: 100%;
-      padding: 10px 12px;
-      border: 1px solid #d6d6d6;
-      border-radius: 6px;
-      font-size: 15px;
-      box-sizing: border-box;
-    }
-
-    textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
-
-    .btn {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 10px 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 15px;
-    }
-
-    .btn.secondary {
-      background: var(--accent);
-    }
-
-    .meta {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    a.contact-link {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    /* Confirmation */
     #confirmation {
-      margin-top: 12px;
-      padding: 10px 12px;
-      border-radius: 6px;
-      background: #e9f7ef;
-      color: #166534;
-      display: none;
+        background: #d4edda;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
     }
-
-    /* Responsive small screens */
-    @media (max-width: 520px) {
-      .container { padding: 18px; }
-      header h1 { font-size: 22px; }
-    }
-  </style>
+    </style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <h1>Baye Masse Ba</h1>
-      <p class="lead">Développeur Web débutant — Sites vitrines & outils simples</p>
-    </header>
 
-    <main>
-      <section aria-labelledby="about-heading">
-        <h2 id="about-heading">À propos de moi</h2>
-        <p>
-          Je suis passionné par le développement web. Je crée des sites vitrines modernes et des outils simples
-          pour aider les particuliers et petits commerces à être visibles en ligne.
-        </p>
-      </section>
+<div class="container">
 
-      <section aria-labelledby="services-heading">
-        <h2 id="services-heading">Mes services</h2>
-        <ul>
-          <li>Site vitrine (1–3 pages)</li>
-          <li>Formulaire de contact</li>
-          <li>Outils web simples</li>
-        </ul>
-      </section>
+    <h1>Développeur Web — J’aide les commerces à être visibles en ligne</h1>
 
-      <section aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Projets</h2>
-        <ul>
-          <li>Site vitrine personnel</li>
-          <li>Mini calculatrice web</li>
-        </ul>
-      </section>
+    <h2>À propos de moi</h2>
+    <p>
+        Je suis passionné par le développement web. 
+        J’aide les entrepreneurs, commerçants et particuliers à présenter leurs activités en ligne grâce à des sites simples, modernes et efficaces. 
+        Mon objectif est de vous aider à attirer plus de clients et développer votre activité.
+    </p>
 
-      <section aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Contact</h2>
+    <h2>Mes services</h2>
+    <ul>
+        <li>Site vitrine (1–3 pages)</li>
+        <li>Formulaire de contact</li>
+        <li>Outils web simples</li>
+    </ul>
 
-        <div class="meta" aria-hidden="false">
-          <!-- Note: for phone and WhatsApp links it's best to include an international country code.
-               Example: +221763181561. If you need, I can add a specific country code. -->
-          <p>WhatsApp : <a class="contact-link" href="https://wa.me/763181561" target="_blank" rel="noopener">76 318 15 61</a></p>
-          <p>Email : <a class="contact-link" href="mailto:bayemasseb9@email.com">bayemasseb9@email.com</a></p>
-          <p>Téléphone : <a class="contact-link" href="tel:782439808">78 243 98 08</a></p>
-        </div>
+    <h2>Pourquoi me choisir ?</h2>
+    <ul>
+        <li>Travail sérieux et rapide</li>
+        <li>Prix adaptés aux petits budgets</li>
+        <li>Disponible et à l’écoute</li>
+        <li>Assistance après la livraison</li>
+    </ul>
 
-        <form id="contactForm" aria-describedby="form-desc">
-          <p id="form-desc" style="margin:0 0 8px 0; color:var(--muted);">Envoyez-moi un message — je vous répondrai rapidement.</p>
+    <h2>Projets</h2>
+    <ul>
+        <li>Site vitrine personnel</li>
+        <li>Mini calculatrice web</li>
+    </ul>
+    
+    <h2>Contact</h2>
 
-          <label for="nom">Votre nom</label>
-          <input type="text" id="nom" name="nom" placeholder="Votre nom" required aria-required="true" />
+    <p>Contactez-moi maintenant pour discuter de votre projet. Devis gratuit.</p>
 
-          <label for="messageUser" style="margin-top:10px;">Votre message</label>
-          <textarea id="messageUser" name="message" placeholder="Votre message" required aria-required="true"></textarea>
+    <p>WhatsApp : 76 318 15 61</p>
+    <p>Email : bayemasseb9@email.com</p>
+    <p>Téléphone : 78 243 98 08</p>
 
-          <div style="margin-top:12px;">
-            <button class="btn" type="submit">Envoyer</button>
-            <button class="btn secondary" type="button" id="clearBtn" style="margin-left:8px;">Effacer</button>
-          </div>
+    <form id="contactForm">
+        <input type="text" id="nom" placeholder="Votre nom" required>
+        <br><br>
+        <textarea id="messageUser" placeholder="Votre message" required></textarea>
+        <br><br>
+        <button type="submit">Envoyer</button>
+    </form>
 
-          <div id="confirmation" role="status" aria-live="polite">
-            Message envoyé avec succès ✅
-          </div>
-        </form>
+    <p id="confirmation" style="display:none;">
+        Message envoyé avec succès ✅
+    </p>
 
-        <div style="margin-top:14px;">
-          <button id="contactScroll" class="btn secondary" type="button">Me contacter</button>
-        </div>
-      </section>
-    </main>
+</div>
+    
+<script>
+const form = document.getElementById("contactForm");
+const confirmation = document.getElementById("confirmation");
 
-    <footer style="margin-top:18px; color:var(--muted); font-size:14px;">
-      <p>© <span id="year"></span> Baye Masse Ba</p>
-    </footer>
-  </div>
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    confirmation.style.display = "block";
+    form.reset();
+});
+</script>
 
-  <script>
-    // Fill year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    const form = document.getElementById('contactForm');
-    const confirmation = document.getElementById('confirmation');
-    const clearBtn = document.getElementById('clearBtn');
-    const contactScroll = document.getElementById('contactScroll');
-    const firstInput = document.getElementById('nom');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      // Basic UX: show confirmation and reset form
-      confirmation.style.display = 'block';
-      confirmation.textContent = 'Message envoyé avec succès ✅';
-      form.reset();
-      firstInput.focus();
-
-      // Hide confirmation after a short time
-      setTimeout(() => {
-        confirmation.style.display = 'none';
-      }, 6000);
-
-      // TODO: replace this with actual submit to backend or email API (e.g., Formspree, Netlify Forms, or your own endpoint)
-    });
-
-    clearBtn.addEventListener('click', function () {
-      form.reset();
-      firstInput.focus();
-    });
-
-    contactScroll.addEventListener('click', function () {
-      // Smooth scroll to form and focus the first field
-      form.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      setTimeout(() => firstInput.focus(), 400);
-    });
-
-    // Optional: simple client-side validation enhancement (visual)
-    form.addEventListener('invalid', function (e) {
-      e.preventDefault();
-      const field = e.target;
-      field.focus();
-      confirmation.style.display = 'block';
-      confirmation.textContent = 'Veuillez remplir tous les champs requis.';
-      confirmation.style.background = '#fff4e5';
-      confirmation.style.color = '#7a4f00';
-      setTimeout(() => {
-        confirmation.style.display = 'none';
-        confirmation.style.background = '';
-        confirmation.style.color = '';
-      }, 4000);
-    }, true);
-  </script>
 </body>
-  </html>
+</html>
