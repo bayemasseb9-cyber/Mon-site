@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Développeur Web — J’aide les commerces à être visibles en ligne</title>
+    
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    }
+
+    h1 {
+    color: #2c3e50;
+    }
+
+    h2 {
+    color: #34495e;
+    }
+
+    ul {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    }
+
+    p {
+    font-size: 16px;
+    }
+</style>
+    
+</head>
+<body>
+
+<div class="container"
+
+    <h1>Baye Masse Ba</h1>
+    <p style="text-align:center;">
+    Développeur Web débutant — Sites vitrines & outils simples
+    </p>
+
+    <h2>À propos de moi</h2>
+    <p>
+    Je suis passionné par le développement web. 
+J’aide les entrepreneurs, commerçants et particuliers à présenter leurs activités en ligne grâce à des sites simples, modernes et efficaces. 
+Mon objectif est de vous aider à attirer plus de clients et développer votre activité.
+    </p>
+
+    <h2>Mes services</h2>
+    
+<ul>
+    <li>Site vitrine (1–3 pages)</li>
+    <li>Formulaire de contact</li>
+    <li>Outils web simples</li>
+</ul>
+
+<h2>Pourquoi me choisir ?</h2>
+<ul>
+  <li>Travail sérieux et rapide</li>
+  <li>Prix adaptés aux petits budgets</li>
+  <li>Disponible et à l’écoute</li>
+  <li>Assistance après la livraison</li>
+  
+<h2>Projets</h2>
+<ul>
+    <li>Site vitrine personnel</li>
+    <li>Mini calculatrice web</li>
+</ul>
+    
+    <h2>Contact</h2>
+
+<p> Contactez-moi maintenant pour discuter de votre projet. Devis gratuit <p/>
+
+    <p>WhatsApp : 76 318 15 61 </p>
+    <p>Email : bayemasseb9@email.com </p>
+
+<form id="contactForm">
+    <input type="text" id="nom" placeholder="Votre nom" required>
+    <br><br>
+    <textarea id="messageUser" placeholder="Votre message" required></textarea>
+    <br><br>
+
+    <button type="submit">Envoyer</button>
+</form>
+
+<p id="confirmation" style="display:none;">
+    Message envoyé avec succès ✅
+</p>
+    
+    <p>Téléphone : 78 243 98 08 </p>
+    
+    <button>Me contacter</button>
+    
+    <p id="message" style="display:none;">
+    Merci de m’avoir contacté ! Je vous répondrai bientôt.
+</p>
+
+</div>
+    
+    <script>
+    const form = document.getElementById("contactForm");
+    const confirmation = document.getElementById("confirmation");
+
+    form.addEventListener("submit", function (e) {
+   e.preventDefault(); // empêche le rechargement
+
+    confirmation.style.display = "block";
+    form.reset();
+    });
+    
+</script>
+
+</body>
+</html>
