@@ -1,103 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title> Mon site vitrine </title>
-    
-    <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 20px;
-    }
-
-    h1 { color: #2c3e50; }
-    h2 { color: #34495e; }
-
-    ul {
-        background: white;
-        padding: 15px;
-        border-radius: 5px;
-    }
-
-    p { font-size: 16px; }
-
-    #confirmation {
-        background: #d4edda;
-        padding: 10px;
-        border-radius: 5px;
-        margin-top: 10px;
-    }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Développeur Web — Baye Masse Ba</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <p> Baye Masse Ba </p>   
-<div class="container">
 
-    <h1>Développeur Web — J’aide les commerces à être visibles en ligne</h1>
+  <header>
+    <h1>Développeur Web</h1>
+    <p>J’aide les commerces et entrepreneurs à être visibles en ligne.</p>
+  </header>
 
+  <section id="about">
     <h2>À propos de moi</h2>
     <p>
-        Je suis passionné par le développement web. 
-        J’aide les entrepreneurs, commerçants et particuliers à présenter leurs activités en ligne grâce à des sites simples, modernes et efficaces. 
-        Mon objectif est de vous aider à attirer plus de clients et développer votre activité.
+      Passionné par le numérique, je crée des sites modernes,
+      rapides et accessibles pour aider votre business à attirer
+      plus de clients.
     </p>
+  </section>
 
+  <section id="services">
     <h2>Mes services</h2>
     <ul>
-        <li>Site vitrine (1–3 pages)</li>
-        <li>Formulaire de contact</li>
-        <li>Outils web simples</li>
+      <li>Création de site vitrine professionnel</li>
+      <li>Mise en place de contact WhatsApp</li>
+      <li>Ajout de localisation et photos</li>
+      <li>Maintenance et mise à jour</li>
     </ul>
+  </section>
 
-    <h2>Pourquoi me choisir ?</h2>
-    <ul>
-        <li>Travail sérieux et rapide</li>
-        <li>Prix adaptés aux petits budgets</li>
-        <li>Disponible et à l’écoute</li>
-        <li>Assistance après la livraison</li>
-    </ul>
+  <section id="contact">
+    <h2>Contact rapide</h2>
+    <p>Téléphone / WhatsApp : <strong>+221 76 318 15 61</strong></p>
+    <p>Email : <strong>bamassebaye@gmail.com</strong></p>
 
-    <h2>Projets</h2>
-    <ul>
-        <li>Site vitrine personnel</li>
-        <li>Mini calculatrice web</li>
-    </ul>
-    
-    <h2>Contact</h2>
+    <a href="https://wa.me/221763181561" target="_blank">
+      <button>Écrire sur WhatsApp</button>
+    </a>
 
-    <p>Contactez-moi maintenant pour discuter de votre projet. Devis gratuit.</p>
+    <a href="tel:+221763181561">
+      <button>Appeler maintenant</button>
+    </a>
+  </section>
 
-    <p>WhatsApp : 76 318 15 61</p>
-    <p>Email : bayemasseb9@email.com</p>
-    <p>Téléphone : 78 243 98 08</p>
-
-    <form id="contactForm">
-        <input type="text" id="nom" placeholder="Votre nom" required>
-        <br><br>
-        <textarea id="messageUser" placeholder="Votre message" required></textarea>
-        <br><br>
-        <button type="submit">Envoyer</button>
-    </form>
-
-    <p id="confirmation" style="display:none;">
-        Message envoyé avec succès ✅
-    </p>
-
-</div>
-    
-<script>
-const form = document.getElementById("contactForm");
-const confirmation = document.getElementById("confirmation");
-
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    confirmation.style.display = "block";
-    form.reset();
-});
-</script>
-
+  <footer>
+  <p><strong>Ce site est en vente. Pour les intéressés, contactez vite !</strong></p>
+  <p>Baye Masse — 2026</p>
+</footer>
 </body>
 </html>
