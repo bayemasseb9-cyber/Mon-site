@@ -3,171 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baye Masse Ba | Développeur Web au Sénégal</title>
+    <title>Baye Masse Ba | Développeur Web Freelance Sénégal</title>
+    <!-- Chargement correct des icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
     <style>
         :root {
             --primary: #2563eb;
             --secondary: #0ea5e9;
-            --dark: #1e293b;
+            --dark: #0f172a;
             --light: #f8fafc;
             --accent: #f59e0b;
+            --success: #22c55e;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', 'Segoe UI', sans-serif; }
 
         body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
 
+        /* Header avec un dégradé pro */
         header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
         }
 
+        .profile-box { position: relative; display: inline-block; }
+        
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
-            border: 5px solid rgba(255,255,255,0.2);
+            border: 6px solid rgba(255,255,255,0.1);
             margin-bottom: 20px;
             object-fit: cover;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
 
-        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .container { max-width: 1100px; margin: auto; padding: 20px; }
 
-        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; opacity: 0.9; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 10px; letter-spacing: -1px; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: auto; }
 
         .badge {
-            background: var(--accent);
+            background: var(--success);
             color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: bold;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
             display: inline-block;
-            margin-top: 15px;
+            margin-top: 20px;
+            animation: pulse 2s infinite;
         }
 
-        section { margin: 40px 0; }
-        h2 { border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 25px; color: var(--primary); }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
 
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        section { margin: 60px 0; }
+        h2 { font-size: 2rem; color: var(--dark); margin-bottom: 30px; display: flex; align-items: center; gap: 10px; }
+        h2::after { content: ""; flex: 1; height: 2px; background: #e2e8f0; }
+
+        /* Grille des services */
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
         .card {
             background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transition: 0.3s;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f1f5f9;
         }
-        .card:hover { transform: translateY(-5px); }
-        .card i { font-size: 2rem; color: var(--primary); margin-bottom: 15px; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; display: block; }
+        .card h3 { margin-bottom: 10px; font-size: 1.4rem; }
 
-        .portfolio { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        /* Portfolio */
+        .portfolio { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .project-item {
-            background: #eee;
-            border-radius: 10px;
+            background: white;
+            border-radius: 20px;
             overflow: hidden;
-            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-        .project-item img { width: 100%; height: 200px; object-fit: cover; }
-        .project-info { padding: 15px; background: white; }
+        .project-img { width: 100%; height: 220px; object-fit: cover; background: #e2e8f0; }
+        .project-info { padding: 25px; }
+        .project-info h4 { margin-bottom: 10px; font-size: 1.2rem; }
+        .project-link { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
 
+        /* CTA Section */
         .cta-box {
             background: var(--dark);
             color: white;
-            padding: 40px;
-            border-radius: 20px;
+            padding: 60px 30px;
+            border-radius: 30px;
             text-align: center;
+            margin-top: 80px;
         }
 
         .btn {
-            display: inline-block;
-            padding: 15px 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 35px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
             margin: 10px;
             transition: 0.3s;
+            font-size: 1.1rem;
         }
         .btn-whatsapp { background: #25d366; color: white; }
         .btn-call { background: var(--primary); color: white; }
-        .btn:hover { opacity: 0.9; transform: scale(1.05); }
+        .btn:hover { opacity: 0.9; transform: translateY(-3px); }
 
-        footer { text-align: center; padding: 40px; color: #64748b; font-size: 0.9rem; }
+        footer { text-align: center; padding: 60px 20px; color: #94a3b8; border-top: 1px solid #e2e8f0; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            header { padding: 60px 20px; }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <img src=(src="profil.jpg") alt="Baye Masse Ba" class="profile-img">
+    <div class="profile-box">
+        <!-- Vérifie bien que ton image s'appelle profil.jpg -->
+        <img src="profil.jpg" alt="Baye Masse Ba" class="profile-img">
+    </div>
     <div class="hero">
         <h1>Baye Masse Ba</h1>
-        <p>Développeur Web Freelance — Sénégal</p>
-        <span class="badge">Disponible pour nouveaux projets</span>
+        <p>Expert en création de sites web modernes pour entreprises et commerçants au Sénégal.</p>
+        <div class="badge"><i class="fas fa-circle"></i> Disponible immédiatement</div>
     </div>
 </header>
 
 <div class="container">
-    <section>
-        <h2>Pourquoi travailler avec moi ?</h2>
-        <p>J'aide les entrepreneurs et commerçants sénégalais à transformer leur activité avec des sites web qui attirent vraiment des clients.</p>
+    <section id="services">
+        <h2><i class="fas fa-star text-accent"></i> Mes Services</h2>
         <div class="services">
             <div class="card">
-                <i class="fas fa-rocket"></i>
-                <h3>Sites Vitrines</h3>
-                <p>Présentez vos services 24h/24 avec un design moderne et pro.</p>
+                <i class="fas fa-laptop-code"></i>
+                <h3>Site Vitrine Pro</h3>
+                <p>Un site élégant pour présenter vos services et rassurer vos futurs clients.</p>
             </div>
             <div class="card">
                 <i class="fab fa-whatsapp"></i>
-                <h3>Vente WhatsApp</h3>
-                <p>Intégration directe pour recevoir vos commandes sur WhatsApp.</p>
+                <h3>Click-to-WhatsApp</h3>
+                <p>Vos clients vous contactent ou commandent directement sur votre téléphone.</p>
             </div>
             <div class="card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>100% Mobile</h3>
-                <p>Votre site sera parfait sur tous les téléphones de vos clients.</p>
+                <i class="fas fa-search-dollar"></i>
+                <h3>SEO & Visibilité</h3>
+                <p>Optimisation pour que les clients vous trouvent sur Google Maps et ailleurs.</p>
             </div>
         </div>
     </section>
 
-    <section>
-        <h2>Mes Réalisations (Démos)</h2>
+    <section id="portfolio">
+        <h2><i class="fas fa-briefcase"></i> Démonstrations</h2>
         <div class="portfolio">
+            <!-- Projet 1 -->
             <div class="project-item">
-                <img src="https://images.unsplash.com" alt="Exemple Restaurant">
+                <img src="https://images.unsplash.com" alt="Restaurant Demo" class="project-img">
                 <div class="project-info">
-                    <h4>Modèle Restaurant / Fast-Food</h4>
-                    <a href="#">Voir la démo</a>
+                    <h4>Restaurant & Gastronomie</h4>
+                    <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px;">Menu digital et réservation WhatsApp.</p>
+                    <a href="#" class="project-link">VOIR LE MODÈLE <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
+            <!-- Projet 2 -->
             <div class="project-item">
-                <img src="https://images.unsplash.com" alt="Exemple Coiffeur">
+                <img src="https://images.unsplash.com" alt="Coiffeur Demo" class="project-img">
                 <div class="project-info">
-                    <h4>Modèle Salon de Coiffure</h4>
-                    <a href="#">Voir la démo</a>
+                    <h4>Beauté & Bien-être</h4>
+                    <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px;">Prise de rendez-vous et galerie photos.</p>
+                    <a href="#" class="project-link">VOIR LE MODÈLE <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="cta-box">
-        <h2>Prêt à lancer votre projet ?</h2>
-        <p>Devis gratuit et réponse sous 2 heures.</p>
-        <div style="margin-top: 20px;">
+        <h2 style="color: white; border: none; justify-content: center;">Discutons de votre projet</h2>
+        <p style="margin-bottom: 30px; opacity: 0.8;">Boostez votre chiffre d'affaires avec un site web à votre image.</p>
+        <div class="cta-buttons">
             <a href="https://wa.me" class="btn btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> Discuter sur WhatsApp
+                <i class="fab fa-whatsapp"></i> WhatsApp : 76 318 15 61
             </a>
             <a href="tel:+221763181561" class="btn btn-call">
-                <i class="fas fa-phone"></i> Appeler : 76 318 15 61
+                <i class="fas fa-phone-alt"></i> Appeler directement
             </a>
         </div>
     </section>
 </div>
 
 <footer>
-    <p>&copy; 2026 Baye Masse Ba — Développeur Web Freelance <br> Dakar, Sénégal</p>
+    <p>Baye Masse Ba &copy; 2026 — Développeur Freelance à Dakar, Sénégal.</p>
+    <p style="font-size: 0.7rem; margin-top: 10px;">Propulsé par la passion et le code propre.</p>
 </footer>
 
 </body>
