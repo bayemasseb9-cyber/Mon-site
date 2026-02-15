@@ -4,52 +4,172 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Développeur Web — Baye Masse Ba</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      margin:0;
+      background:#f4f4f4;
+      color:#333;
+    }
+
+    header{
+      background:#4CAF50;
+      color:white;
+      padding:40px 20px;
+      display:flex;
+      gap:20px;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
+      text-align:center;
+    }
+
+    /* PHOTO */
+    .photo-box{
+      position:relative;
+      width:130px;
+      height:130px;
+    }
+
+    #profilePreview{
+      width:130px;
+      height:130px;
+      border-radius:50%;
+      object-fit:cover;
+      border:4px solid white;
+      cursor:pointer;
+      transition:.3s;
+      background:white;
+    }
+
+    #profilePreview:hover{
+      transform:scale(1.05);
+    }
+
+    #profileInput{
+      position:absolute;
+      inset:0;
+      opacity:0;
+      cursor:pointer;
+    }
+
+    section{
+      max-width:900px;
+      margin:auto;
+      padding:40px 20px;
+    }
+
+    h2{
+      color:#4CAF50;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#4CAF50;
+      color:white;
+      border:none;
+      padding:12px 20px;
+      border-radius:6px;
+      cursor:pointer;
+      margin-top:10px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .btn:hover{
+      background:#45a049;
+    }
+
+    footer{
+      margin-top:40px;
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+  </style>
 </head>
 
 <body>
 
-  <header>
+<header>
+  <div class="photo-box">
+    <img id="profilePreview"
+         src="https://via.placeholder.com/130"
+         alt="Photo profil">
+    <input type="file" id="profileInput" accept="image/*">
+  </div>
+
+  <div>
     <h1>Développeur Web</h1>
     <p>J’aide les commerces et entrepreneurs à être visibles en ligne.</p>
-  </header>
+  </div>
+</header>
 
-  <section id="about">
-    <h2>À propos de moi</h2>
-    <p>
-      Passionné par le numérique, je crée des sites modernes,
-      rapides et accessibles pour aider votre business à attirer
-      plus de clients.
-    </p>
-  </section>
+<section>
+  <h2>À propos de moi</h2>
+  <p>
+    Passionné par le numérique, je crée des sites modernes et rapides
+    pour aider votre business à attirer plus de clients.
+  </p>
+</section>
 
-  <section id="services">
-    <h2>Mes services</h2>
-    <ul>
-      <li>Création de site vitrine professionnel</li>
-      <li>Mise en place de contact WhatsApp</li>
-      <li>Ajout de localisation et photos</li>
-      <li>Maintenance et mise à jour</li>
-    </ul>
-  </section>
+<section>
+  <h2>Mes services</h2>
+  <ul>
+    <li>Création de site vitrine professionnel</li>
+    <li>Mise en place de contact WhatsApp</li>
+    <li>Ajout de photos & localisation</li>
+    <li>Maintenance et mise à jour</li>
+  </ul>
+</section>
 
-  <section id="contact">
-    <h2>Contact rapide</h2>
-    <p>Téléphone / WhatsApp : <strong>+221 76 318 15 61</strong></p>
-    <p>Email : <strong>bamassebaye@gmail.com</strong></p>
+<section>
+  <h2>Contact rapide</h2>
 
-    <a href="https://wa.me/221763181561" target="_blank">
-      <button>Écrire sur WhatsApp</button>
+  <p><strong>Téléphone / WhatsApp :</strong> +221 76 318 15 61</p>
+
+  <p>
+    <strong>Email :</strong>
+    <a href="mailto:bamassebaye@gmail.com?subject=Demande d'information">
+      bamassebaye@gmail.com
     </a>
+  </p>
 
-    <a href="tel:+221763181561">
-      <button>Appeler maintenant</button>
-    </a>
-  </section>
+  <!-- WhatsApp -->
+  <a class="btn" href="https://wa.me/221763181561" target="_blank">
+    Écrire sur WhatsApp
+  </a>
 
-  <footer>
-  <p><strong>Ce site est en vente. Pour les intéressés, contactez vite !</strong></p>
+  <br><br>
+
+  <!-- Appel -->
+  <a class="btn" href="tel:+221763181561">
+    Appeler maintenant
+  </a>
+</section>
+
+<footer>
+  <p><strong>Site en vente — contactez vite !</strong></p>
   <p>Baye Masse — 2026</p>
 </footer>
+
+<script>
+  const input = document.getElementById("profileInput");
+  const preview = document.getElementById("profilePreview");
+
+  input.addEventListener("change", () => {
+    const file = input.files[0];
+    if(!file) return;
+
+    const reader = new FileReader();
+    reader.onload = e => {
+      preview.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  });
+</script>
+
 </body>
 </html>
