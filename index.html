@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baye Masse Ba | Développeur Web Freelance Sénégal</title>
-    <!-- Chargement correct des icônes -->
+    <!-- Chargement des icônes CORRIGÉ -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
     <style>
         :root {
@@ -20,7 +20,6 @@
 
         body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
 
-        /* Header avec un dégradé pro */
         header {
             background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
             color: white;
@@ -29,8 +28,6 @@
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
         }
 
-        .profile-box { position: relative; display: inline-block; }
-        
         .profile-img {
             width: 160px;
             height: 160px;
@@ -68,7 +65,6 @@
         h2 { font-size: 2rem; color: var(--dark); margin-bottom: 30px; display: flex; align-items: center; gap: 10px; }
         h2::after { content: ""; flex: 1; height: 2px; background: #e2e8f0; }
 
-        /* Grille des services */
         .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
         .card {
             background: white;
@@ -80,22 +76,28 @@
         }
         .card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
         .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; display: block; }
-        .card h3 { margin-bottom: 10px; font-size: 1.4rem; }
 
-        /* Portfolio */
         .portfolio { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .project-item {
             background: white;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
         }
+        .project-item:hover { transform: scale(1.02); }
         .project-img { width: 100%; height: 220px; object-fit: cover; background: #e2e8f0; }
         .project-info { padding: 25px; }
-        .project-info h4 { margin-bottom: 10px; font-size: 1.2rem; }
-        .project-link { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+        .project-link { 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 700; 
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-        /* CTA Section */
         .cta-box {
             background: var(--dark);
             color: white;
@@ -115,25 +117,18 @@
             font-weight: 700;
             margin: 10px;
             transition: 0.3s;
-            font-size: 1.1rem;
         }
         .btn-whatsapp { background: #25d366; color: white; }
         .btn-call { background: var(--primary); color: white; }
-        .btn:hover { opacity: 0.9; transform: translateY(-3px); }
+        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
 
         footer { text-align: center; padding: 60px 20px; color: #94a3b8; border-top: 1px solid #e2e8f0; }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            header { padding: 60px 20px; }
-        }
     </style>
 </head>
 <body>
 
 <header>
     <div class="profile-box">
-        <!-- Vérifie bien que ton image s'appelle profil.jpg -->
         <img src="profil.jpg" alt="Baye Masse Ba" class="profile-img">
     </div>
     <div class="hero">
@@ -145,7 +140,7 @@
 
 <div class="container">
     <section id="services">
-        <h2><i class="fas fa-star text-accent"></i> Mes Services</h2>
+        <h2><i class="fas fa-star" style="color: var(--accent);"></i> Mes Services</h2>
         <div class="services">
             <div class="card">
                 <i class="fas fa-laptop-code"></i>
@@ -168,36 +163,51 @@
     <section id="portfolio">
         <h2><i class="fas fa-briefcase"></i> Démonstrations</h2>
         <div class="portfolio">
-            <!-- Projet 1 -->
+            <!-- Projet 1 : RESTO -->
             <div class="project-item">
-                <img src="https://images.unsplash.com" alt="Restaurant Demo" class="project-img">
+                <img src="imageA.png" alt="Restaurant Demo" class="project-img">
                 <div class="project-info">
                     <h4>Restaurant & Gastronomie</h4>
-                    <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px;">Menu digital et réservation WhatsApp.</p>
-                    <a href="#" class="project-link">VOIR LE MODÈLE <i class="fas fa-arrow-right"></i></a>
+                    <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px;">Menu digital et commande WhatsApp.</p>
+                    <a href="https://bayemasseb9-cyber.github.io/Demo.resto/" class="project-link" target="_blank">
+                        VOIR LE MODÈLE <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
-            <!-- Projet 2 -->
+            <!-- Projet 2 : BOUTIQUE -->
             <div class="project-item">
-                <img src="https://images.unsplash.com" alt="Coiffeur Demo" class="project-img">
+                <img src="imageE.png" alt="Boutique Demo" class="project-img">
+                <div class="project-info">
+                    <h4>Boutique en ligne</h4>
+                    <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px;">Catalogue produits et vente directe.</p>
+                    <a href="https://bayemasseb9-cyber.github.io/Demo.boutique/" class="project-link" target="_blank">
+                        VOIR LE MODÈLE <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Projet 3 : SALON -->
+            <div class="project-item">
+                <img src="imageZ.png" alt="Coiffeur Demo" class="project-img">
                 <div class="project-info">
                     <h4>Beauté & Bien-être</h4>
-                    <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px;">Prise de rendez-vous et galerie photos.</p>
-                    <a href="#" class="project-link">VOIR LE MODÈLE <i class="fas fa-arrow-right"></i></a>
+                    <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px;">Prise de rendez-vous et tarifs.</p>
+                    <a href="https://bayemasseb9-cyber.github.io/Demo.sallon/" class="project-link" target="_blank">
+                        VOIR LE MODÈLE <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="cta-box">
-        <h2 style="color: white; border: none; justify-content: center;">Discutons de votre projet</h2>
+        <h2>Discutons de votre projet</h2>
         <p style="margin-bottom: 30px; opacity: 0.8;">Boostez votre chiffre d'affaires avec un site web à votre image.</p>
-        <div class="cta-buttons">
+        <div>
             <a href="https://wa.me" class="btn btn-whatsapp">
                 <i class="fab fa-whatsapp"></i> WhatsApp : 76 318 15 61
             </a>
             <a href="tel:+221763181561" class="btn btn-call">
-                <i class="fas fa-phone-alt"></i> Appeler directement
+                <i class="fas fa-phone-alt"></i> Appeler maintenant
             </a>
         </div>
     </section>
@@ -205,7 +215,6 @@
 
 <footer>
     <p>Baye Masse Ba &copy; 2026 — Développeur Freelance à Dakar, Sénégal.</p>
-    <p style="font-size: 0.7rem; margin-top: 10px;">Propulsé par la passion et le code propre.</p>
 </footer>
 
 </body>
