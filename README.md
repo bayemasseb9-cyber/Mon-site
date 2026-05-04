@@ -181,8 +181,8 @@ Mon premier site vitrine
 
         <div class="meta" aria-hidden="false">
           <!-- Note: for phone and WhatsApp links it's best to include an international country code.
-               Example: +221763181561. If you need, I can add a specific country code. -->
-          <p>WhatsApp : <a class="contact-link" href="https://wa.me/763181561" target="_blank" rel="noopener">76 318 15 61</a></p>
+               Example: +221782439808. If you need, I can add a specific country code. -->
+          <p>WhatsApp : <a class="contact-link" href="https://wa.me/782439808" target="_blank" rel="noopener">782439808</a></p>
           <p>Email : <a class="contact-link" href="mailto:bayemasseb9@email.com">bayemasseb9@email.com</a></p>
           <p>Téléphone : <a class="contact-link" href="tel:782439808">78 243 98 08</a></p>
         </div>
